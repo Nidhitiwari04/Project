@@ -29,18 +29,32 @@ public class FirstProject
 		
 		js.executeScript("window.scrollBy(0,1000)");
 		
+		
+		WebElement txtbox=driver.findElement(By.xpath("//*[@id=\"show-textbox\"]"));
+				txtbox.click();
+	    System.out.println(txtbox.isDisplayed());
+	    Thread.sleep(500);
+		
+	    
+		 WebElement hide= driver.findElement(By.xpath("//*[@id=\"hide-textbox\"]"));
+		   hide.click();
+		   
+			          
+	   Thread.sleep(5000);
+		
+		
 		 
-		WebElement hover= driver.findElement(By.xpath("//*[@id=\"mousehover\"]"));
-		   Actions act = new Actions(driver);
-		   Thread.sleep(500);
-		   act.moveToElement(hover).perform();
-		   Thread.sleep(3000);
+		//WebElement hover= driver.findElement(By.xpath("//*[@id=\"mousehover\"]"));
+		  // Actions act = new Actions(driver);
+		  // Thread.sleep(500);
+		   //act.moveToElement(hover).perform();
+		  // Thread.sleep(3000);
 		      
 		      
-		   js.executeScript("window.scrollBy(0,1000)");
+		  // js.executeScript("window.scrollBy(0,1000)");
 	            //iframe
-		   driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
-		   driver.findElement(By.xpath("//a[@class=\"theme-btn register-btn\"]")).click();
+		 //  driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		 //  driver.findElement(By.xpath("//a[@class=\"theme-btn register-btn\"]")).click();
 		   
 	            
 	
